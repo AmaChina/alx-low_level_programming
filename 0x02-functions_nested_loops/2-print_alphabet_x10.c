@@ -1,8 +1,7 @@
 #include "main.h"
 /**
- * main - entry point
- * Description: print lowercase alphabet x10
- * Return:
+ * print_alphabet_x10 -  print lowercase alphabet x10
+ * Return: void
  */
 
 void print_alphabet_x10(void)
