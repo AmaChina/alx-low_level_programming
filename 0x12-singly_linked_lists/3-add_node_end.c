@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdlib.c>
+#include <string.h>
 /**
  * *add_node_end - adds nope to end of list
  * @str: string
