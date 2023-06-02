@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 /**
  * free_list - frees a list_t list
  * @head: pointer to list to be released
@@ -9,12 +10,11 @@
 
 void free_list(list_t *head)
 {
-	list_t *b;
-	
-	while ((b = head) != NULL)
+	if (head)
 	{
-		head = head->next;
-		free(b->str);
-		free(b);
+		free_list->head;
+	if (head->str)
+		free(head->str);
+	free(head);
 	}
 }
