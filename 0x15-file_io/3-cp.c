@@ -37,8 +37,8 @@ void close_file(int fd)
 	if (k == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-                exit(100);
-        }
+		exit(100);
+	}
 }
 
 /**
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 	rd = read(from, buff, 1024);
 	buff = create_buffer(argv[2]);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	
+
 	do {
 		if (from == -1 || r == -1)
 		{
@@ -80,8 +80,7 @@ int main(int argc, char *argv[])
 
 		rd = read(from, buff, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
-	}
-	while (rd > 0);
+	} while (rd > 0);
 
 	free(buff);
 	close_file(from);
